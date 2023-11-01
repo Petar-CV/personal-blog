@@ -2,10 +2,16 @@
 const today = new Date();
 ---
 
-<footer>
-  &copy; {today.getFullYear()} Your name here. All rights reserved.
-  <div class='social-links'>
-    <a href='https://m.webtoo.ls/@astro' target='_blank'>
+<footer
+  class='p-4 bg-gradient-to-b from-gray-100 to-white text-gray-500 text-center'
+>
+  &copy; {today.getFullYear()} Petar Cvetko Voćanec. All rights reserved.
+  <div class='flex justify-center gap-4 mt-4'>
+    <a
+      class='text-gray-500 hover:text-gray-700'
+      href='https://m.webtoo.ls/@astro'
+      target='_blank'
+    >
       <span class='sr-only'>Follow Astro on Mastodon</span>
       <svg
         viewBox='0 0 16 16'
@@ -19,7 +25,11 @@ const today = new Date();
         ></path></svg
       >
     </a>
-    <a href='https://twitter.com/astrodotbuild' target='_blank'>
+    <a
+      class='text-gray-500 hover:text-gray-700'
+      href='https://twitter.com/astrodotbuild'
+      target='_blank'
+    >
       <span class='sr-only'>Follow Astro on Twitter</span>
       <svg
         viewBox='0 0 16 16'
@@ -33,7 +43,11 @@ const today = new Date();
         ></path></svg
       >
     </a>
-    <a href='https://github.com/withastro/astro' target='_blank'>
+    <a
+      class='text-gray-500 hover:text-gray-700'
+      href='https://github.com/withastro/astro'
+      target='_blank'
+    >
       <span class='sr-only'>Go to Astro's GitHub repo</span>
       <svg
         viewBox='0 0 16 16'
@@ -49,24 +63,3 @@ const today = new Date();
     </a>
   </div>
 </footer>
-<style>
-  footer {
-    padding: 2em 1em 6em 1em;
-    background: linear-gradient(var(--gray-gradient)) no-repeat;
-    color: rgb(var(--gray));
-    text-align: center;
-  }
-  .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    margin-top: 1em;
-  }
-  .social-links a {
-    text-decoration: none;
-    color: rgb(var(--gray));
-  }
-  .social-links a:hover {
-    color: rgb(var(--gray-dark));
-  }
-</style>
