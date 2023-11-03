@@ -1,0 +1,23 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'a'> {
+  text: string;
+  svg: string;
+  viewBox: string;
+}
+
+const { href, text, svg, viewBox, class: className } = Astro.props;
+---
+
+<a
+  class='flex px-2 py-4 text-black hover:text-gray-700'
+  href={href}
+  target='_blank'
+  class:list={[className]}
+>
+  <span class='sr-only'>{text}</span>
+  <svg width='32' height='32' viewBox={viewBox}>
+    <path fill='currentColor' d={svg}></path>
+  </svg>
+</a>
