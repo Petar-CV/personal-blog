@@ -1,0 +1,26 @@
+<script>
+  // When the script loads, check if the user has a saved preference
+  const userPrefersDark = window.localStorage.getItem('dark-mode');
+
+  switch (userPrefersDark) {
+    case 'true':
+      document.documentElement.classList.add('dark');
+      break;
+    case 'false':
+      document.documentElement.classList.remove('dark');
+      break;
+    default:
+      // If no saved preference, check for OS-level preference
+      const watchMedia = window.matchMedia(
+        '(prefers-color-scheme: dark)',
+      ).matches;
+
+      watchMedia
+        ? document.documentElement.classList.add('dark')
+        : document.documentElement.classList.remove('dark');
+
+      // Save OS-level preference
+      window.localStorage.setItem('dark-mode', watchMedia ? 'true' : 'false');
+      break;
+  }
+</script>
