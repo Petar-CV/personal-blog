@@ -11,7 +11,6 @@ const { href, text, svg, viewBox, class: className } = Astro.props;
 ---
 
 <a href={href} target='_blank' class:list={[className]}>
-  <span class='sr-only'>{text}</span>
   <svg
     width='32'
     height='32'

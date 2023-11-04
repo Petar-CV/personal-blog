@@ -13,25 +13,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 <html lang='en'>
   <head>
     <BaseHead title={title} description={description} />
-    <style>
-      .prose {
-        width: 720px;
-        max-width: calc(100% - 2em);
-        margin: auto;
-        padding: 1em;
-        color: rgb(var(--gray-dark));
-      }
-      .title {
-        margin-bottom: 1em;
-        padding: 1em 0;
-        text-align: center;
-        line-height: 1;
-      }
-      .date {
-        margin-bottom: 0.5em;
-        color: rgb(var(--gray));
-      }
-    </style>
   </head>
 
   <body>
@@ -51,9 +32,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             )
           }
         </div>
-        <div class='prose'>
-          <div class='title'>
-            <div class='date'>
+        <div class='max-w-4xl m-auto p-2'>
+          <div class='mb-2 p-2 text-center leading-none'>
+            <div class='mb-2'>
               <FormattedDate date={pubDate} />
               {
                 updatedDate && (
