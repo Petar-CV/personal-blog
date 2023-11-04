@@ -33,6 +33,7 @@ const posts = (await getCollection('blog')).sort(
                     src={post.data.heroImage}
                     alt={post.data.title}
                     transition:name={`post-${post.slug}`}
+                    transition:animate='initial'
                   />
                   <h4 class='first:text-xl'>{post.data.title}</h4>
                   <p class='date'>
