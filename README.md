@@ -1,68 +1,65 @@
-# Astro Starter Kit: Blog
+# Personal Blog by Petar Cvetko Voćanec 📄
 
-```sh
-npm create astro@latest -- --template blog
-```
+<p align="center">
+  <img width="560" alt="Personal Blog Lighthouse Score" src="public/images/static/blog_by_pcv.png">
+</p>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
+<p align="center">
+  <a href="https://www.typescriptlang.org/" target="blank">
+      <img alt="TypeScript" src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white">
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://tailwindcss.com/" target="blank">
+      <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white">
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://aws.amazon.com/" target="blank">
+      <img alt="AWS" src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white">
+  </a>
+</p>
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+<p align="center">
+    <img alt="AWS" src="https://codebuild.eu-central-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiNlNibGovSHRBbDZmODlTUVFSYU9TOXBRK3BMT2NMR2luTDU1M215Ym5kNXNLcjhQTEVVWUo5UFJXNVFkSHNOcGxBSHdzQ1BEZHM3dnpua1ZZTDd2K0dzPSIsIml2UGFyYW1ldGVyU3BlYyI6ImZDcnkvYVVmQWtWRXM3RmMiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=main">
+</p>
 
-![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
+Fast and lightweight personal blog built with [Astro](https://astro.build/) and [TailwindCSS](https://tailwindcss.com/) hosted on [AWS](https://aws.amazon.com/) using S3 and CloudFront.
 
-Features:
+Production site is available at [blog.petar-cv.com](https://blog.petar-cv.com/).
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+Light ☀️ and dark 🌙 mode are supported by default.
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-├── public/
-├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
 Any static assets, like images, can be placed in the `public/` directory.
+
+All blog posts are stored in `src/content/blog` directory in markdown format.
+
+## 💻 Tech Stack
+
+**Main Framework** - [Astro](https://astro.build/)  
+**Type Checking** - [TypeScript](https://www.typescriptlang.org/)  
+**Styling** - [TailwindCSS](https://tailwindcss.com/)  
+**Deployment** - [AWS](https://aws.amazon.com/)  
+**Code Formatting** - [Prettier](https://prettier.io/)  
+**Linting** - [ESLint](https://eslint.org)
 
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| Command                  | Action                                       |
+| :----------------------- | :------------------------------------------- |
+| `npm install`            | Installs dependencies                        |
+| `npm run dev`            | Starts local dev server at `localhost:4321`  |
+| `npm run build`          | Build your production site to `./dist/`      |
+| `npm run preview`        | Preview your build locally, before deploying |
+| `npm run prettier:check` | Check code format with Prettier              |
+| `npm run prettier:write` | Format codes with Prettier                   |
 
-## 👀 Want to learn more?
+## 📜 License
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Licensed under the BSD 3-Clause License, Copyright © 2023
 
-## Credit
+## 🧑‍🤝‍🧑 Contributing
 
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+Made with ❤️ by [Petar Cvetko Voćanec](https://github.com/Petar-CV) and [contributors](https://github.com/Petar-CV/personal-blog/graphs/contributors).
