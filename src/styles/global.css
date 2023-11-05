@@ -13,7 +13,7 @@
   font-display: swap;
 }
 body {
-  @apply bg-zinc-100 dark:bg-blue-chill-950 text-xl dark:text-white font-atkinson;
+  @apply bg-zinc-100 font-atkinson text-xl dark:bg-blue-chill-950 dark:text-white;
 }
 main {
   @apply m-auto w-full max-w-5xl p-6;
@@ -24,7 +24,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply text-blue-chill-900 dark:text-blue-chill-50 leading-tight;
+  @apply leading-tight text-blue-chill-900 dark:text-blue-chill-50;
 }
 h1 {
   @apply text-5xl;
@@ -45,7 +45,7 @@ a {
   @apply text-blue-chill-900 dark:text-blue-chill-50;
 }
 a:hover {
-  @apply underline text-blue-chill-950 dark:text-blue-chill-200;
+  @apply text-blue-chill-950 underline dark:text-blue-chill-200;
 }
 strong,
 b {
@@ -61,19 +61,19 @@ table {
   @apply w-full;
 }
 img {
-  @apply h-auto rounded-lg max-w-full;
+  @apply h-auto max-w-full rounded-lg;
 }
 code {
   @apply px-1.5 py-0.5 text-blue-chill-900 dark:text-blue-chill-50;
 }
 pre {
-  @apply p-6 rounded-lg;
+  @apply rounded-lg p-6;
 }
 pre > code {
   all: unset;
 }
 blockquote {
-  @apply border-l-2 border-blue-chill-900 dark:border-blue-chill-50 pl-4 m-0;
+  @apply m-0 border-l-2 border-blue-chill-900 pl-4 dark:border-blue-chill-50;
 }
 hr {
   @apply border-t-1 border-t-blue-chill-900;

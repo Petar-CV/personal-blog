@@ -21,14 +21,14 @@ const posts = (await getCollection('blog')).sort(
     <main>
       <section>
         <ul
-          class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8'
+          class='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8'
         >
           {
             posts.map((post) => (
-              <li class='first:sm:w-full first:sm:col-span-2 first:md:col-span-3 first:sm:text-center'>
+              <li class='first:sm:col-span-2 first:sm:w-full first:sm:text-center first:md:col-span-3'>
                 <a href={`/blog/${post.slug}/`}>
                   <img
-                    class='hover:-mt-3 hover:mb-3 transition-all duration-300 ease-in-out'
+                    class='transition-all duration-300 ease-in-out hover:-mt-3 hover:mb-3'
                     src={post.data.heroImage}
                     alt={post.data.title}
                     transition:name={`post-${post.slug}`}

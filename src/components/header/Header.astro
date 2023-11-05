@@ -7,10 +7,10 @@ import ThemeModeToggle from './ThemeModeToggle.astro';
 
 <header
   transition:animate='none'
-  class='m-0 px-4 py-0 shadow-sm w-full flex justify-center bg-zinc-100 dark:bg-blue-chill-950 border-b-1 border-b-blue-chill-900'
+  class='m-0 flex w-full justify-center border-b-1 border-b-blue-chill-900 bg-zinc-100 px-4 py-0 shadow-sm dark:bg-blue-chill-950'
 >
   <nav
-    class='flex items-center justify-between max-w-5xl w-full px-2 sm:px-6 py-2'
+    class='flex w-full max-w-5xl items-center justify-between px-2 py-2 sm:px-6'
   >
     <!-- Left content -->
     <div>
@@ -28,7 +28,7 @@ import ThemeModeToggle from './ThemeModeToggle.astro';
     </div>
 
     <!-- Right content -->
-    <div class='hidden sm:flex space-x-4 justify-center items-center'>
+    <div class='hidden items-center justify-center space-x-4 sm:flex'>
       <ThemeModeToggle />
 
       <HeaderSocial
