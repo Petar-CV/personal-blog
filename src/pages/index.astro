@@ -12,53 +12,48 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
   </head>
   <body>
     <Header title={SITE_TITLE} />
-    <main>
-      <h1>🧑‍🚀 Hello, Astronaut!</h1>
+    <main class='space-y-2'>
+      <h1 class='mb-2'>Welcome to my personal blog! 👋</h1>
       <p>
-        Welcome to the official <a href='https://astro.build/'>Astro</a> blog
-        starter template. This template serves as a lightweight,
-        minimally-styled starting point for anyone looking to build a personal
-        website, blog, or portfolio with Astro.
+        My name is <strong>Petar Cvetko Voćanec</strong> and I'm a software
+        developer specializing in web technologies. 💻
       </p>
       <p>
-        This template comes with a few integrations already configured in your
-        <code>astro.config.mjs</code> file. You can customize your setup with
-        <a href='https://astro.build/integrations'>Astro Integrations</a> to add
-        tools like Tailwind, React, or Vue to your project.
+        I'm situated in <strong>Bjelovar, Croatia</strong>. 🇭🇷
       </p>
-      <p>Here are a few ideas on how to get started with the template:</p>
-      <ul>
-        <li>Edit this page in <code>src/pages/index.astro</code></li>
-        <li>
-          Edit the site header items in <code>src/components/Header.astro</code>
-        </li>
-        <li>
-          Add your name to the footer in <code>src/components/Footer.astro</code
+      <p>
+        This blog is built with
+        <strong><a href='https://astro.build' target='_blank'>Astro</a></strong>
+         and hosted on
+        <strong>
+          <a href='https://aws.amazon.com/' target='_blank'>AWS</a>
+        </strong> using
+        <strong>
+          <a href='https://aws.amazon.com/s3/' target='_blank'>S3</a>
+        </strong> and
+        <strong>
+          <a href='https://aws.amazon.com/cloudfront/' target='_blank'
+            >CloudFront</a
           >
-        </li>
-        <li>
-          Check out the included blog posts in <code>src/pages/blog/</code>
-        </li>
-        <li>
-          Customize the blog post page layout in <code
-            >src/layouts/BlogPost.astro</code
+        </strong> for static website hosting and CDN.
+      </p>
+      <p>
+        The source code for this blog is available on
+        <strong>
+          <a href='https://github.com/Petar-CV/personal-blog/' target='_blank'
+            >GitHub</a
           >
-        </li>
-      </ul>
-      <p>
-        Have fun! If you get stuck, remember to <a
-          href='https://docs.astro.build/'
-          >read the docs
-        </a> or <a href='https://astro.build/chat'>join us on Discord</a> to ask
-        questions.
+        </strong>.
       </p>
       <p>
-        Looking for a blog template with a bit more personality? Check out <a
-          href='https://github.com/Charca/astro-blog-template'
-          >astro-blog-template
-        </a> by <a href='https://twitter.com/Charca'>Maxi Ferreira</a>.
+        Feel free to get in touch with me on
+        <strong>
+          <a href='https://linkedin.com/in/pcvetkovocanec/' target='_blank'
+            >LinkedIn</a
+          >
+        </strong>.
       </p>
+      <Footer />
     </main>
-    <Footer />
   </body>
 </html>
