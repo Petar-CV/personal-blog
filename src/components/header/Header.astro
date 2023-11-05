@@ -1,6 +1,6 @@
 ---
 import HeaderLink from '../header/HeaderLink.astro';
-import { SITE_TITLE } from '../../consts';
+import { SHORT_SITE_TITLE, SITE_TITLE } from '../../consts';
 import HeaderSocial from './HeaderSocial.astro';
 import ThemeModeToggle from './ThemeModeToggle.astro';
 ---
@@ -9,17 +9,22 @@ import ThemeModeToggle from './ThemeModeToggle.astro';
   transition:animate='none'
   class='m-0 px-4 py-0 shadow-sm w-full flex justify-center bg-zinc-100 dark:bg-blue-chill-950 border-b-1 border-b-blue-chill-900'
 >
-  <nav class='flex items-center justify-between max-w-5xl w-full px-6 py-2'>
+  <nav
+    class='flex items-center justify-between max-w-5xl w-full px-2 sm:px-6 py-2'
+  >
     <!-- Left content -->
     <div>
-      <a href='/'>{SITE_TITLE}</a>
+      <a class='hidden sm:block' href='/'>{SITE_TITLE}</a>
+      <a class='block sm:hidden' href='/'>{SHORT_SITE_TITLE}</a>
     </div>
 
     <!-- Middle content -->
-    <div class='flex flex-col gap-2 sm:flex-row sm:gap-4'>
-      <HeaderLink href='/'>Home</HeaderLink>
-      <HeaderLink href='/blog'>Blog</HeaderLink>
-      <HeaderLink href='/about'>About</HeaderLink>
+    <div>
+      <div class='flex gap-2 sm:flex-row sm:gap-4'>
+        <HeaderLink href='/'>Home</HeaderLink>
+        <HeaderLink href='/blog'>Blog</HeaderLink>
+        <HeaderLink href='/about'>About</HeaderLink>
+      </div>
     </div>
 
     <!-- Right content -->
