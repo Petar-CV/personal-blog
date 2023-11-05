@@ -20,7 +20,7 @@ const { slug, title, description, pubDate, updatedDate, heroImage } =
 
   <body>
     <Header />
-    <main class='w-full m-0'>
+    <main>
       <article>
         <div class='w-full'>
           {
@@ -29,15 +29,13 @@ const { slug, title, description, pubDate, updatedDate, heroImage } =
                 class='block mx-auto my-0 border-8 shadow-sm'
                 transition:name={`post-${slug}`}
                 transition:animate='initial'
-                width={1020}
-                height={510}
                 src={heroImage}
                 alt=''
               />
             )
           }
         </div>
-        <div class='max-w-4xl m-auto p-2'>
+        <div class='m-auto p-2'>
           <div class='mb-2 p-2 text-center leading-none'>
             <div class='mb-2'>
               <FormattedDate date={pubDate} />

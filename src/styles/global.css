@@ -16,7 +16,7 @@ body {
   @apply bg-zinc-100 dark:bg-blue-chill-950 text-xl dark:text-white font-atkinson;
 }
 main {
-  @apply m-auto w-[720px] max-w-full p-6;
+  @apply m-auto w-full max-w-5xl p-6;
 }
 h1,
 h2,

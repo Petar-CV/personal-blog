@@ -28,8 +28,6 @@ const posts = (await getCollection('blog')).sort(
               <li class='first:sm:w-full first:sm:col-span-2 first:md:col-span-3 first:sm:text-center'>
                 <a href={`/blog/${post.slug}/`}>
                   <img
-                    width={720}
-                    height={360}
                     src={post.data.heroImage}
                     alt={post.data.title}
                     transition:name={`post-${post.slug}`}
