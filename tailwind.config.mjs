@@ -25,6 +25,9 @@ export default {
       borderWidth: {
         1: '1px',
       },
+      brightness: {
+        85: '.85',
+      },
     },
   },
   plugins: [],
