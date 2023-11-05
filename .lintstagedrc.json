@@ -1,0 +1,5 @@
+{
+  "*": [
+    "prettier --write . --plugin prettier-plugin-astro --plugin prettier-plugin-tailwindcss"
+  ]
+}
