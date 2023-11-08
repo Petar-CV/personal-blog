@@ -1,3 +1,9 @@
+## 0.1.0 (08-11-2023)
+
+- Milestone: `0.1.0` 🎉
+- Updated dependencies to match their latest versions on 08-11-2023
+- Replaced default favicon with a custom one
+
 ## 0.0.4 (08-11-2023)
 
 - Added Husky and lint-staged to run Prettier on commit

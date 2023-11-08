@@ -7,7 +7,7 @@
     "url": "https://petar-cv.com"
   },
   "type": "module",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -24,7 +24,7 @@
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.3",
     "@astrojs/tailwind": "^5.0.2",
-    "astro": "^3.4.3",
+    "astro": "^3.4.4",
     "tailwindcss": "^3.3.5",
     "typescript": "^5.2.2"
   },
@@ -33,6 +33,6 @@
     "lint-staged": "^15.0.2",
     "prettier": "^3.0.3",
     "prettier-plugin-astro": "^0.12.1",
-    "prettier-plugin-tailwindcss": "^0.5.6"
+    "prettier-plugin-tailwindcss": "^0.5.7"
   }
 }
