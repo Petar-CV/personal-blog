@@ -1,5 +1,6 @@
 {
   "*.{js,ts,astro,css,json,txt,yml,yaml}": [
-    "prettier --write . --plugin prettier-plugin-astro --plugin prettier-plugin-tailwindcss"
+    "prettier --write . --plugin prettier-plugin-astro --plugin prettier-plugin-tailwindcss",
+    "git add"
   ]
 }
