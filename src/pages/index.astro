@@ -3,6 +3,8 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/header/Header.astro';
 import Footer from '../components/footer/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import FeaturedPosts from '../components/posts/FeaturedPosts.astro';
+import LandingPageIntro from '../components/landing-page/LandingPageIntro.astro';
 ---
 
 <!doctype html>
@@ -12,47 +14,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
   </head>
   <body>
     <Header title={SITE_TITLE} />
-    <main class='space-y-2'>
-      <h1 class='mb-2'>Welcome to my personal blog! 👋</h1>
-      <p>
-        My name is <strong>Petar Cvetko Voćanec</strong> and I'm a software
-        developer specializing in web technologies. 💻
-      </p>
-      <p>
-        I'm situated in <strong>Bjelovar, Croatia</strong>. 🇭🇷
-      </p>
-      <p>
-        This blog is built with
-        <strong><a href='https://astro.build' target='_blank'>Astro</a></strong>
-         and hosted on
-        <strong>
-          <a href='https://aws.amazon.com/' target='_blank'>AWS</a>
-        </strong> using
-        <strong>
-          <a href='https://aws.amazon.com/s3/' target='_blank'>S3</a>
-        </strong> and
-        <strong>
-          <a href='https://aws.amazon.com/cloudfront/' target='_blank'
-            >CloudFront</a
-          >
-        </strong> for static website hosting and CDN.
-      </p>
-      <p>
-        The source code for this blog is available on
-        <strong>
-          <a href='https://github.com/Petar-CV/personal-blog/' target='_blank'
-            >GitHub</a
-          >
-        </strong>.
-      </p>
-      <p>
-        Feel free to get in touch with me on
-        <strong>
-          <a href='https://linkedin.com/in/pcvetkovocanec/' target='_blank'
-            >LinkedIn</a
-          >
-        </strong>.
-      </p>
+    <main class='space-y-4'>
+      <LandingPageIntro />
+
+      <FeaturedPosts />
+
       <Footer />
     </main>
   </body>

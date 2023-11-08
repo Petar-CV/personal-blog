@@ -1,3 +1,11 @@
+## 0.0.4 (08-11-2023)
+
+- Added Husky and lint-staged to run Prettier on commit
+- Added `robots.txt` file
+- Added prettier-plugin-tailwindcss for TailwindCSS support in Prettier
+- Improved header responsiveness on mobile devices
+- Featured posts are now displayed on the home page
+
 ## 0.0.3 (04-11-2023)
 
 - Initial implementation of ViewTransition API

@@ -1,0 +1,40 @@
+---
+import FormattedDate from '../FormattedDate.astro';
+import { getCollection } from 'astro:content';
+
+const featuredPosts = (
+  await getCollection('blog', ({ data }) => {
+    return data.featured;
+  })
+)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+---
+
+{
+  featuredPosts.length > 0 && (
+    <section>
+      <h2 class='mb-2'>Featured posts ✨</h2>
+
+      <ul class='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8'>
+        {featuredPosts.map((featuredPost) => (
+          <li>
+            <a href={`/blog/${featuredPost.slug}/`}>
+              <img
+                class='transition-all duration-300 ease-in-out hover:-mt-3 hover:mb-3'
+                src={featuredPost.data.heroImage}
+                alt={featuredPost.data.title}
+                transition:name={`post-${featuredPost.slug}`}
+                transition:animate='initial'
+              />
+              <h4>{featuredPost.data.title}</h4>
+              <p class='date'>
+                <FormattedDate date={featuredPost.data.pubDate} />
+              </p>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
+}
