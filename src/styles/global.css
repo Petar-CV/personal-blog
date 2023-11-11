@@ -12,6 +12,9 @@
   font-style: normal;
   font-display: swap;
 }
+html {
+  @apply scroll-smooth;
+}
 body {
   @apply bg-zinc-100 font-atkinson text-xl dark:bg-blue-chill-950 dark:text-white;
 }
