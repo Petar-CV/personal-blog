@@ -27,7 +27,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply leading-tight text-blue-chill-900 dark:text-blue-chill-50;
+  @apply mb-2 leading-tight text-blue-chill-900 dark:text-blue-chill-50;
 }
 h1 {
   @apply text-5xl;
@@ -50,10 +50,6 @@ a {
 a:hover {
   @apply text-blue-chill-950 underline dark:text-blue-chill-200;
 }
-strong,
-b {
-  @apply font-bold;
-}
 p,
 time,
 textarea {
@@ -66,18 +62,45 @@ table {
 img {
   @apply h-auto max-w-full rounded-lg;
 }
-code {
-  @apply px-1.5 py-0.5 text-blue-chill-900 dark:text-blue-chill-50;
-}
-pre {
-  @apply rounded-lg p-6;
-}
-pre > code {
-  all: unset;
-}
-blockquote {
-  @apply m-0 border-l-2 border-blue-chill-900 pl-4 dark:border-blue-chill-50;
-}
 hr {
   @apply border-t-1 border-t-blue-chill-900;
+}
+
+/* Markdown styling */
+.markdown-content p {
+  @apply mt-4;
+}
+.markdown-content b,
+.markdown-content strong {
+  @apply font-bold;
+}
+.markdown-content a {
+  @apply text-blue-chill-400 dark:text-blue-chill-500;
+}
+.markdown-content a:hover {
+  @apply text-blue-chill-500 underline dark:text-blue-chill-600;
+}
+.markdown-content code {
+  @apply px-1.5 py-0.5 text-base italic text-blue-chill-900 dark:text-blue-chill-200;
+}
+.markdown-content pre {
+  @apply my-4 rounded-lg p-6;
+}
+.markdown-content pre > code {
+  all: unset;
+  @apply text-sm;
+}
+.markdown-content blockquote {
+  @apply m-0 border-l-2 border-blue-chill-900 pl-4 dark:border-blue-chill-50;
+}
+.markdown-content ul {
+  @apply list-inside list-disc;
+}
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  @apply my-4;
 }

@@ -50,7 +50,10 @@ const { slug, title, description, pubDate, updatedDate, heroImage } =
             <h1 class='mb-2'>{title}</h1>
             <hr />
           </div>
-          <slot />
+
+          <div class='markdown-content'>
+            <slot />
+          </div>
         </div>
       </article>
     </main>
