@@ -1,0 +1,30 @@
+---
+import BaseHead from '../../components/global/BaseHead.astro';
+import Header from '../../components/header/Header.astro';
+import Footer from '../../components/footer/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { getCollection } from 'astro:content';
+import TagsUtils from '../../utils/tags/TagsUtils';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+const tags = TagsUtils.getUniqueTagsFromPosts(posts);
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <!-- Tag selector -->
+      <div class='mb-4 flex flex-row gap-2'>
+        {tags.map((tag) => <a href={`/tags/${tag}/`}>#{tag}</a>)}
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

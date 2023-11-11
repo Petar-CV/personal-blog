@@ -1,0 +1,100 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import TagsUtils from '../../utils/tags/TagsUtils';
+import BaseHead from '../../components/global/BaseHead.astro';
+import Footer from '../../components/footer/Footer.astro';
+import Header from '../../components/header/Header.astro';
+import FormattedDate from '../../components/utils/date/FormattedDate.astro';
+import { SITE_TITLE } from '../../consts';
+
+export interface Props {
+  post: CollectionEntry<'blog'>;
+  tag: string;
+}
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+
+  const tags = TagsUtils.getUniqueTagsFromPosts(posts);
+
+  return tags.map((tag) => {
+    return {
+      params: { tag },
+      props: { tag },
+    };
+  });
+}
+
+const { tag } = Astro.props;
+
+const posts = await getCollection('blog');
+
+const postsWithTag = posts.filter((post) => {
+  return post.data?.tags?.includes(tag);
+});
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <BaseHead
+      title={`#${tag} | ${SITE_TITLE}`}
+      description={`Posts by tag ${tag}`}
+    />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <!-- Back button -->
+      <a href='/blog/' class='flex flex-row items-center'>
+        <svg
+          class='inline-block h-5 w-5 align-middle'
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 24 24'
+          fill='none'
+          stroke='currentColor'
+          stroke-width='2'
+          stroke-linecap='round'
+          stroke-linejoin='round'
+        >
+          <polyline points='15 18 9 12 15 6'></polyline>
+        </svg>
+         Back
+      </a>
+
+      <!-- Current tag -->
+      <h2 class='mb-4'>
+        Posts tagged with
+        <span class='font-bold'>#{tag}</span>
+      </h2>
+
+      <!-- List of blog posts with the given tag -->
+      <section>
+        <ul
+          class='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8'
+        >
+          {
+            postsWithTag.map((post) => (
+              <li>
+                <a href={`/blog/${post.slug}/`}>
+                  <img
+                    class='transition-all duration-300 ease-in-out hover:-mt-3 hover:mb-3'
+                    src={post.data.heroImage}
+                    alt={post.data.title}
+                    transition:name={`post-${post.slug}`}
+                    transition:animate='initial'
+                  />
+                  <h4>{post.data.title}</h4>
+                  <p class='date'>
+                    <FormattedDate date={post.data.pubDate} />
+                  </p>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>

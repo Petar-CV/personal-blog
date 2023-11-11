@@ -3,6 +3,7 @@
 - Added default styles for markdown content
 - Headings in markdown content are now linked
 - Added initial tag list support to each blog post
+- Added filtering blog posts by tag
 
 ## 0.1.0 (08-11-2023)
 
