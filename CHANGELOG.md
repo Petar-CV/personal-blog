@@ -1,3 +1,9 @@
+## 0.1.1 (11-11-2023)
+
+- Added default styles for markdown content
+- Headings in markdown content are now linked
+- Added initial tag list support to each blog post
+
 ## 0.1.0 (08-11-2023)
 
 - Milestone: `0.1.0` 🎉
