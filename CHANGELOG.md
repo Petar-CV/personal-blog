@@ -1,6 +1,8 @@
 ## 0.1.2 (12-11-2023)
 
 - Added initial implementation of fuzzy search using Fuse.js and Preact
+- Improved site-wide accessibility
+- Added [Unlighthouse](https://unlighthouse.dev/) to automate parts of the Lighthouse audit
 
 ## 0.1.1 (11-11-2023)
 

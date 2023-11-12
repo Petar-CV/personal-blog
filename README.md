@@ -55,6 +55,8 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`        | Preview your build locally, before deploying |
 | `npm run prettier:check` | Check code format with Prettier              |
 | `npm run prettier:write` | Format codes with Prettier                   |
+| `npm run prepare`        | Set up the husky hooks                       |
+| `npm run unlighthouse`   | Runs Unlighthouse with local config          |
 
 ## 📜 License
 
