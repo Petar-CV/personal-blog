@@ -15,7 +15,9 @@ const { href, text, svg, viewBox, class: className } = Astro.props;
   target='_blank'
   class:list={[className]}
   class='hover:brightness-85'
+  aria-label={text}
 >
+  <span class='screen-reader-only'>{text}</span>
   <svg
     width='32'
     height='32'

@@ -93,7 +93,12 @@ export default function SearchPosts({ searchList }: Props) {
           autoFocus
           ref={inputRef}
         />
-        <button className='flex items-center pr-3' onClick={onClearSearch}>
+        <button
+          className='flex items-center pr-3'
+          onClick={onClearSearch}
+          aria-label='Clear search'
+        >
+          <span class='screen-reader-only'>Clear search</span>
           <svg
             class='h-5 w-5 align-middle'
             xmlns='http://www.w3.org/2000/svg'
@@ -119,32 +124,21 @@ export default function SearchPosts({ searchList }: Props) {
       <ul class='space-y-4'>
         {searchResults &&
           searchResults.map(({ item, refIndex }) => (
-            <li class='cursor-pointer' key={`${refIndex}-${item.slug}`}>
-              <a href={`/blog/${item.slug}`}>
-                <div class='flex flex-row items-center gap-2'>
-                  <img
-                    width={200}
-                    height={200}
-                    class='transition-all duration-300 ease-in-out hover:-mt-3 hover:mb-3'
-                    src={item.data.heroImage}
-                    alt={item.data.title}
-                  />
+            <li class='flex' key={`${refIndex}-${item.slug}`}>
+              <a
+                href={`/blog/${item.slug}`}
+                class='flex flex-row items-center gap-2'
+              >
+                <img
+                  width={200}
+                  height={200}
+                  class='transition-all duration-300 ease-in-out hover:-mt-3 hover:mb-3'
+                  src={item.data.heroImage}
+                  alt=''
+                />
 
-                  <div>
-                    <h2 class='text-xl font-bold'>{item.data.title}</h2>
-                    {/* Show matches */}
-                    {/* <div class='text-sm text-gray-500'>
-                      {matches?.map(({ key, value }) => {
-                        return (
-                          <span class='block'>
-                            {key === 'body' ? '...' : ''}
-                            {value}
-                            {key === 'body' ? '...' : ''}
-                          </span>
-                        );
-                      })}
-                    </div> */}
-                  </div>
+                <div>
+                  <h2 class='text-xl font-bold'>{item.data.title}</h2>
                 </div>
               </a>
             </li>

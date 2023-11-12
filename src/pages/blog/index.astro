@@ -45,19 +45,17 @@ const searchList: SearchPostItem[] = posts.map((post) => ({
           {
             posts.map((post) => (
               <li class='first:sm:col-span-2 first:sm:w-full first:sm:text-center first:md:col-span-3'>
-                <a href={`/blog/${post.slug}/`}>
+                <a href={`/blog/${post.slug}/`} aria-label={post.data.title}>
                   <img
                     class='w-full transition-all duration-300 ease-in-out hover:-mt-3 hover:mb-3'
                     src={post.data.heroImage}
-                    alt={post.data.title}
+                    alt=''
                     transition:name={`post-${post.slug}`}
                     transition:animate='initial'
                   />
-                  <h4 class='first:text-xl'>{post.data.title}</h4>
-                  <p class='date'>
-                    <FormattedDate date={post.data.pubDate} />
-                  </p>
+                  <p class='text-2xl'>{post.data.title}</p>
                 </a>
+                <FormattedDate date={post.data.pubDate} />
               </li>
             ))
           }

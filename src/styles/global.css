@@ -16,7 +16,7 @@ html {
   @apply scroll-smooth;
 }
 body {
-  @apply bg-zinc-100 font-atkinson text-xl dark:bg-blue-chill-950 dark:text-white;
+  @apply bg-zinc-100 font-atkinson dark:bg-blue-chill-950 dark:text-white;
 }
 main {
   @apply m-auto w-full max-w-5xl p-6;
@@ -68,6 +68,16 @@ img {
 }
 hr {
   @apply border-t-1 border-t-blue-chill-900;
+}
+.screen-reader-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 /* Markdown styling */

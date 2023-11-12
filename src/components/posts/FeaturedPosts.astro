@@ -27,8 +27,8 @@ const featuredPosts = (
                 transition:name={`post-${featuredPost.slug}`}
                 transition:animate='initial'
               />
-              <h4>{featuredPost.data.title}</h4>
-              <p class='date'>
+              <p class='text-2xl'>{featuredPost.data.title}</p>
+              <p>
                 <FormattedDate date={featuredPost.data.pubDate} />
               </p>
             </a>
