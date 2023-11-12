@@ -1,3 +1,7 @@
+## 0.1.2 (12-11-2023)
+
+- Added initial implementation of fuzzy search using Fuse.js and Preact
+
 ## 0.1.1 (11-11-2023)
 
 - Added default styles for markdown content

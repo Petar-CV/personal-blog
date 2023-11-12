@@ -1,0 +1,33 @@
+---
+import BaseHead from '../../components/global/BaseHead.astro';
+import Header from '../../components/header/Header.astro';
+import Footer from '../../components/footer/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { getCollection } from 'astro:content';
+import SearchPosts, {
+  type SearchPostItem,
+} from '../../components/utils/search/SearchPosts.tsx';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+const searchList: SearchPostItem[] = posts.map((post) => ({
+  slug: post.slug,
+  body: post.body,
+  data: post.data,
+}));
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <BaseHead title={`Search | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <SearchPosts client:load searchList={searchList} />
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -52,8 +52,12 @@ a:hover {
 }
 p,
 time,
-textarea {
+textarea,
+input {
   @apply text-blue-chill-900 dark:text-blue-chill-50;
+}
+input {
+  @apply bg-zinc-200 dark:bg-blue-chill-900;
 }
 textarea,
 table {

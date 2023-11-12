@@ -6,11 +6,19 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/utils/date/FormattedDate.astro';
 import TagsUtils from '../../utils/tags/TagsUtils';
+import SearchPosts, {
+  type SearchPostItem,
+} from '../../components/utils/search/SearchPosts';
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 const tags = TagsUtils.getUniqueTagsFromPosts(posts);
+const searchList: SearchPostItem[] = posts.map((post) => ({
+  slug: post.slug,
+  body: post.body,
+  data: post.data,
+}));
 ---
 
 <!doctype html>
@@ -21,8 +29,11 @@ const tags = TagsUtils.getUniqueTagsFromPosts(posts);
   <body>
     <Header />
     <main>
+      <!-- Search bar -->
+      <SearchPosts client:load searchList={searchList} />
+
       <!-- Tag selector -->
-      <div class='mb-4 flex flex-row gap-2'>
+      <div class='my-4 flex flex-row gap-2'>
         {tags.map((tag) => <a href={`/tags/${tag}/`}>#{tag}</a>)}
       </div>
 
@@ -36,7 +47,7 @@ const tags = TagsUtils.getUniqueTagsFromPosts(posts);
               <li class='first:sm:col-span-2 first:sm:w-full first:sm:text-center first:md:col-span-3'>
                 <a href={`/blog/${post.slug}/`}>
                   <img
-                    class='transition-all duration-300 ease-in-out hover:-mt-3 hover:mb-3'
+                    class='w-full transition-all duration-300 ease-in-out hover:-mt-3 hover:mb-3'
                     src={post.data.heroImage}
                     alt={post.data.title}
                     transition:name={`post-${post.slug}`}
