@@ -43,6 +43,17 @@ All blog posts are stored in `src/content/blog` directory in markdown format.
 **Code Formatting** - [Prettier](https://prettier.io/)  
 **Linting** - [ESLint](https://eslint.org)
 
+## General workflow
+
+### Using Obsidian.md
+
+1. Create a folder for the new blog post.
+2. Create a new file in the folder with the name of the blog post.
+3. Write the blog post in markdown format.
+4. Place all the image you use in the same folder as the blog post and reference them using the following format `![image description](./image_name.png)`.
+5. When you are done with the blog post, copy the folder to `src/content/blog` directory.
+6. When you are satisfied with the blog post, commit and push the changes to the repository.
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
