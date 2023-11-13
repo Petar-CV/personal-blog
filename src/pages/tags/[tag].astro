@@ -2,6 +2,7 @@
 import { type CollectionEntry, getCollection } from 'astro:content';
 import TagsUtils from '../../utils/tags/TagsUtils';
 import BaseHead from '../../components/global/BaseHead.astro';
+import { Image } from 'astro:assets';
 import Footer from '../../components/footer/Footer.astro';
 import Header from '../../components/header/Header.astro';
 import FormattedDate from '../../components/utils/date/FormattedDate.astro';
@@ -77,7 +78,7 @@ const postsWithTag = posts.filter((post) => {
             postsWithTag.map((post) => (
               <li>
                 <a href={`/blog/${post.slug}/`} aria-label={post.data.title}>
-                  <img
+                  <Image
                     class='transition-all duration-300 ease-in-out hover:-mt-3 hover:mb-3'
                     src={post.data.heroImage}
                     alt=''

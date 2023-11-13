@@ -133,7 +133,7 @@ export default function SearchPosts({ searchList }: Props) {
                   width={200}
                   height={200}
                   class='transition-all duration-300 ease-in-out hover:-mt-3 hover:mb-3'
-                  src={item.data.heroImage}
+                  src={item.data.heroImage.src}
                   alt=''
                 />
 

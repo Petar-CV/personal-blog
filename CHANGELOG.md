@@ -1,3 +1,8 @@
+## 0.1.3 (13-11-2023)
+
+- Removed placeholder blog posts
+- Replaced default `<img>` elements with Astro's [Image](https://docs.astro.build/en/guides/images/) component
+
 ## 0.1.2 (12-11-2023)
 
 - Added initial implementation of fuzzy search using Fuse.js and Preact
