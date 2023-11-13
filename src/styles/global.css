@@ -105,7 +105,7 @@ hr {
   @apply text-sm;
 }
 .markdown-content blockquote {
-  @apply m-0 border-l-2 border-blue-chill-900 pl-4 dark:border-blue-chill-50;
+  @apply m-0 border-l-2 border-blue-chill-500 pl-4 dark:border-blue-chill-50;
 }
 .markdown-content ul {
   @apply list-inside list-disc;
