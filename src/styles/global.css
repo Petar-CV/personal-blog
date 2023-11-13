@@ -118,3 +118,6 @@ hr {
 .markdown-content h6 {
   @apply my-4;
 }
+.markdown-content img {
+  @apply w-full max-w-md;
+}
