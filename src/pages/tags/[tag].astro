@@ -30,9 +30,15 @@ const { tag } = Astro.props;
 
 const posts = await getCollection('blog');
 
-const postsWithTag = posts.filter((post) => {
-  return post.data?.tags?.includes(tag);
-});
+const postsWithTag = posts
+  .filter((post) => {
+    return post.data?.tags?.includes(tag);
+  })
+  .sort((a, b) => {
+    return (
+      new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+    );
+  });
 ---
 
 <!doctype html>
