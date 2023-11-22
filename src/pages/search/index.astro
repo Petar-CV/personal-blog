@@ -6,7 +6,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import SearchPosts, {
   type SearchPostItem,
-} from '../../components/utils/search/SearchPosts.tsx';
+} from '../../components/utils/search/SearchPosts';
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
