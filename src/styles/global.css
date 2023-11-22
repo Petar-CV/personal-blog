@@ -1,14 +1,20 @@
 @font-face {
   font-family: 'Atkinson';
-  src: url('/fonts/atkinson-regular.woff') format('woff');
-  font-weight: 400;
+  src:
+    url('/fonts/Atkinson-Bold.woff2') format('woff2'),
+    url('/fonts/Atkinson-Bold.woff') format('woff'),
+    url('/fonts/Atkinson-Bold.ttf') format('truetype');
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Atkinson';
-  src: url('/fonts/atkinson-bold.woff') format('woff');
-  font-weight: 700;
+  src:
+    url('/fonts/Atkinson-Regular.woff2') format('woff2'),
+    url('/fonts/Atkinson-Regular.woff') format('woff'),
+    url('/fonts/Atkinson-Regular.ttf') format('truetype');
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
