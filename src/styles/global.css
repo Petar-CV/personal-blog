@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'Atkinson';
   src:
     url('/fonts/Atkinson-Bold.woff2') format('woff2'),
@@ -17,12 +17,13 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-}
+} */
 html {
   @apply scroll-smooth;
 }
 body {
-  @apply bg-zinc-100 font-atkinson dark:bg-blue-chill-950 dark:text-white;
+  /* @apply bg-zinc-100 font-atkinson dark:bg-blue-chill-950 dark:text-white; */
+  @apply bg-zinc-100 dark:bg-blue-chill-950 dark:text-white;
 }
 main {
   @apply m-auto w-full max-w-5xl p-6;

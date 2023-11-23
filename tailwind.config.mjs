@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+// const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -21,9 +21,9 @@ export default {
           950: '#1a2c32',
         },
       },
-      fontFamily: {
-        atkinson: ['Atkinson', 'sans-serif', ...defaultTheme.fontFamily.sans],
-      },
+      // fontFamily: {
+      //   atkinson: ['Atkinson', 'sans-serif', ...defaultTheme.fontFamily.sans],
+      // },
       borderWidth: {
         1: '1px',
       },
