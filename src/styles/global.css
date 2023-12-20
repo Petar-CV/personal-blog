@@ -126,5 +126,5 @@ hr {
   @apply my-4;
 }
 .markdown-content img {
-  @apply w-full max-w-md;
+  @apply max-h-96 w-auto;
 }
