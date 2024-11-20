@@ -1,5 +1,6 @@
 name: Deploy to Personal VPS
 
+#! Since this is a public repository, DO NOT use a job that runs on pull request
 on:
   push:
     branches:
