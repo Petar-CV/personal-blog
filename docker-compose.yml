@@ -1,0 +1,7 @@
+services:
+  personal-blog:
+    build:
+      context: .
+    ports:
+      - '4321:8080'
+    container_name: personal-blog
