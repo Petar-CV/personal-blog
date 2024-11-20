@@ -1,0 +1,19 @@
+name: Deploy to Personal VPS
+
+on:
+  push:
+    branches:
+      - production
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.2.2
+
+      - name: Build and deploy compose file
+        run: |
+          docker compose down
+          docker compose up -d --build
